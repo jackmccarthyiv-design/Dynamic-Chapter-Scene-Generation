@@ -1,0 +1,77 @@
+system:
+  name: "Dynamic Chapter Scene Generation"
+  version: "0.1.0"
+
+video:
+  resolution:
+    width: 1920
+    height: 1080
+  fps: 30
+  loop_duration: 10  # seconds
+  format: "mp4"
+  codec: "h264"
+
+blender:
+  render_engine: "CYCLES"
+  samples: 128
+  use_gpu: true
+  denoising: true
+
+chapter_analysis:
+  min_chapter_length: 100  # minimum words
+  max_chapters: 100
+  extract_motifs: true
+  analyze_emotions: true
+  track_continuity: true
+
+scene_generation:
+  biomes:
+    - coastal_cliff
+    - pine_forest
+    - desert_basin
+    - alpine_meadow
+    - urban_ruins
+    - marsh
+    - canyon
+    - tundra
+    - grassland
+    - cave_system
+
+  weather_types:
+    - clear
+    - overcast
+    - rain
+    - storm
+    - mist
+    - fog
+    - snow
+    - dust
+    - wind
+
+  time_of_day:
+    - dawn
+    - morning
+    - noon
+    - afternoon
+    - golden_hour
+    - dusk
+    - twilight
+    - night
+    - blue_hour
+
+  camera_movements:
+    - static
+    - slow_pan_left
+    - slow_pan_right
+    - slow_tilt_up
+    - slow_tilt_down
+    - dolly_forward
+    - dolly_backward
+    - orbit_left
+    - orbit_right
+
+learning:
+  enable_cross_book: true
+  vector_db_collection: "chapter_scenes"
+  embedding_model: "all-MiniLM-L6-v2"
+  similarity_threshold: 0.7

@@ -1,0 +1,28 @@
+# Core dependencies
+anthropic>=0.39.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# NLP and text processing
+nltk>=3.8.1
+spacy>=3.7.0
+
+# Vector database for cross-book learning
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Data handling
+pydantic>=2.0.0
+pyyaml>=6.0
+
+# Video and audio processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=10.0.0
+
+# Blender integration (bpy is included with Blender)
+# Install Blender 4.0+ separately: https://www.blender.org/download/
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.7.0
